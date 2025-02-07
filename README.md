@@ -40,3 +40,9 @@ As an output of above command, The following window will be pop up to asking an 
 ![1D-DBM](https://github.com/user-attachments/assets/ac88ec5d-fae3-43f4-92ff-872630c1b6f4)
 
 ![1D-PDBM-Output](https://github.com/user-attachments/assets/44e7f3fe-341d-4dbf-bc59-cc3cc52b1733)
+
+
+## Note:
+This GUI is still under development stage for a 2D version of (P)-DBM calculation.
+In case you find a bug, have some suggestions to improve the gui or any questions, feel free to contact me on ronish@roma2.infn.it.
+
