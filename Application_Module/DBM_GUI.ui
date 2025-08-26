@@ -1,0 +1,2155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1347</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="toolTipDuration">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>1331</width>
+      <height>870</height>
+     </rect>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="DBM_1D">
+     <attribute name="title">
+      <string>1D - DBM</string>
+     </attribute>
+     <widget class="QLabel" name="PDBM_1D_Selection">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>P-DBM Calculation:</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="PDBM_Yes">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>26</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yes </string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">PDBM_group</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="PDBM_No">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>26</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">PDBM_group</string>
+      </attribute>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>361</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CME_input_1D_heading">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>76</y>
+        <width>361</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; text-decoration: underline;&quot;&gt;CME Input Parameters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="CME_date">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>120</y>
+        <width>115</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1999</year>
+        <month>12</month>
+        <day>31</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>dd-MM-yyyy</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Date_1D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>150</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Date at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="t0_1D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>125</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Time at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+     </widget>
+     <widget class="QTimeEdit" name="CME_time">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>160</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>20</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2000</year>
+        <month>1</month>
+        <day>3</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>h:mm AP</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Target">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>310</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Mercury</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Venus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Earth</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mars</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jupiter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Saturn</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Messenger</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VEX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PSP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SolO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BepiCol</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spitzer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wind</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ST-A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ST-B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kepler</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MSL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maven</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Juno</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="Target_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>76</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Target :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="V0_1D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Speed of CME&lt;br/&gt;at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt; - &lt;span style=&quot; font-weight:700;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;(km/s) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="V0">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>260</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>1000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>160</y>
+        <width>20</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dV0">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>260</y>
+        <width>91</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="R0">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>210</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>20.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dR0">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>210</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>20.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="CME_dt0">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>160</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uncertainity in Time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-2</number>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="minimum">
+       <double>0.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1500.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>60.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DBM_1D_input_label">
+      <property name="geometry">
+       <rect>
+        <x>385</x>
+        <y>10</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; text-decoration: underline;&quot;&gt;DBM Input Parameters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Auto_DBM_1D_label">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Auto Choice:</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Auto_DBM_Yes">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>45</y>
+        <width>61</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Auto_DBM</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="Auto_DBM_No">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>45</y>
+        <width>71</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Auto_DBM</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="Solar_wind_type_label">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Solar Wind Type:</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="W_slow">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>80</y>
+        <width>123</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Slow</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Wind_type</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="W_fast">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>80</y>
+        <width>123</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fast</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Wind_type</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="W_label">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>120</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ambient Solar wind&lt;br/&gt;speed &lt;span style=&quot; font-weight:700;&quot;&gt;w &lt;/span&gt;(km/s) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gamma_label">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>170</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag Parameter &lt;br/&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-weight:700; color:#202122; background-color:transparent&quot;&gt;&amp;#915; &lt;/span&gt;( x 10&lt;span style=&quot; vertical-align:super;&quot;&gt;-7&lt;/span&gt; km&lt;span style=&quot; vertical-align:super;&quot;&gt;-1&lt;/span&gt;) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_in">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>120</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>400.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dW">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>120</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>50.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Gamma">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>180</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>0.200000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dGamma">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>180</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.001000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>0.001000000000000</double>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>120</y>
+        <width>20</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Calculate">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>300</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Reset">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>300</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="R0_1D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>205</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Initial&lt;br/&gt; Position &lt;span style=&quot; font-weight:700;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;0&lt;/span&gt; (R&lt;span style=&quot; vertical-align:sub;&quot;&gt;⊙&lt;/span&gt;) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>0</y>
+        <width>20</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Result_1D_heading">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>10</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#1c71d8;&quot;&gt;DBM Results:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DBM_Result_1D">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>80</y>
+        <width>551</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ASD&lt;br/&gt;ASD&lt;br/&gt;ASD&lt;br/&gt;ASD&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>350</y>
+        <width>1311</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RVT_plot">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>500</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>RVT Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TT_Plot">
+      <property name="geometry">
+       <rect>
+        <x>515</x>
+        <y>440</y>
+        <width>400</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>TT Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="V_plot">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>440</y>
+        <width>400</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>V1 Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_13">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>0</y>
+        <width>20</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Plot_1D_heading">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#1c71d8;&quot;&gt;Plots:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DBM_2D">
+     <attribute name="title">
+      <string>2D DBM</string>
+     </attribute>
+     <widget class="QPushButton" name="Reset_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>780</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="CME_dt0_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>180</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uncertainity in Time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-2</number>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="minimum">
+       <double>0.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1500.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>60.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Target_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>488</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Mercury</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Venus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Earth</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mars</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jupiter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Saturn</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Messenger</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VEX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PSP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SolO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BepiCol</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Spitzer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wind</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ST-A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ST-B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kepler</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MSL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maven</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Juno</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Gamma_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>705</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>0.200000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="V0_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>150</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Speed of CME&lt;br/&gt;at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt; - &lt;span style=&quot; font-weight:700;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;(km/s) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QTimeEdit" name="CME_time_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>180</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>20</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2000</year>
+        <month>1</month>
+        <day>3</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>h:mm AP</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="CME_date_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>138</y>
+        <width>115</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1999</year>
+        <month>12</month>
+        <day>31</day>
+       </datetime>
+      </property>
+      <property name="displayFormat">
+       <string>dd-MM-yyyy</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="PDBM_No_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>27</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">PDBM_group_2</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="t0_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>125</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Time at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Target_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>488</y>
+        <width>76</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Target :</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="V0_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>270</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>1000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dR0_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>220</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Calculate_2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>780</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Auto_DBM_No_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>580</y>
+        <width>71</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Auto_DBM_2</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="DBM_input_2D_heading">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>540</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; text-decoration: underline;&quot;&gt;DBM Input Parameters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PDBM_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>26</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>P-DBM Calculation:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Auto_DBM_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>575</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Auto Choice:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Solar_wind_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>611</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Solar Wind Type:</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_in_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>652</y>
+        <width>90</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>400.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dGamma_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>705</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.001000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>0.001000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CME_input_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>90</y>
+        <width>361</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; text-decoration: underline;&quot;&gt;CME Input Parameters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="PDBM_Yes_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>27</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yes </string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">PDBM_group_2</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="Date_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>138</y>
+        <width>150</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Date at R&lt;span style=&quot; vertical-align:sub;&quot;&gt;0 &lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dW_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>652</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>50.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Auto_DBM_Yes_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>580</y>
+        <width>61</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Auto_DBM_2</string>
+      </attribute>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dV0_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>270</y>
+        <width>91</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="W_slow_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>611</y>
+        <width>123</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Slow</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Wind_type_2</string>
+      </attribute>
+     </widget>
+     <widget class="QDoubleSpinBox" name="R0_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>100</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>20.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="W_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>647</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ambient Solar wind&lt;br/&gt;speed &lt;span style=&quot; font-weight:700;&quot;&gt;w &lt;/span&gt;(km/s) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="W_fast_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>611</y>
+        <width>123</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fast</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">Wind_type_2</string>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="Gamma_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>695</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Drag Parameter &lt;br/&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-weight:700; color:#202122; background-color:transparent&quot;&gt;&amp;#915; &lt;/span&gt;( x 10&lt;span style=&quot; vertical-align:super;&quot;&gt;-7&lt;/span&gt; km&lt;span style=&quot; vertical-align:super;&quot;&gt;-1&lt;/span&gt;) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>361</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>519</y>
+        <width>361</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="R0_2D_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>215</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Initial&lt;br/&gt; Position &lt;span style=&quot; font-weight:700;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;0&lt;/span&gt; (R&lt;span style=&quot; vertical-align:sub;&quot;&gt;⊙&lt;/span&gt;) :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Omega_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME's Angular&lt;br/&gt;Width &lt;span style=&quot; font-family:'sans-serif'; font-weight:700; color:#202122; background-color:transparent;&quot;&gt;ω &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#202122; background-color:transparent;&quot;&gt;(deg) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Phi_CME_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>438</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CME Propagation&lt;br/&gt;Direction &lt;span style=&quot; font-family:'sans-serif'; font-weight:700; color:#202122; background-color:transparent;&quot;&gt;φ&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; color:#202122; background-color:transparent;&quot;&gt;(deg) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Omega">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>400</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>180.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>30.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dOmega">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>400</y>
+        <width>70</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>180.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>5.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="Phi_CME">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>448</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>60.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="dPhi_CME">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>448</y>
+        <width>70</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>200000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+      <property name="value">
+       <double>5.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Cone_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>318</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CME Cone Type :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Cone_type">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>318</y>
+        <width>201</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Concentric Cone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ice-Cream Cone</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tangential Cone</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="Kinemtic_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>362</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kinematic Type :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Kinematic_Type">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>357</y>
+        <width>201</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Self-Similar Expansion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Flattening Cone Evolution</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>-10</y>
+        <width>20</width>
+        <height>841</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_9">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>400</y>
+        <width>20</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_10">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>180</y>
+        <width>20</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_11">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>650</y>
+        <width>20</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Plot">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>60</y>
+        <width>400</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>CME</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DBM_Result_1D_2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>60</y>
+        <width>501</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ASD&lt;br/&gt;ASD&lt;br/&gt;ASD&lt;br/&gt;ASD&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DBM_2D_result_header">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#1c71d8;&quot;&gt;DBM Results:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RVT_plot_2">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>429</y>
+        <width>500</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>RVT Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="V_plot_2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>210</y>
+        <width>371</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>V1 Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TT_Plot_2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>520</y>
+        <width>371</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string>TT Plot</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="About_us">
+     <attribute name="title">
+      <string>About US</string>
+     </attribute>
+     <widget class="QLabel" name="UNITOV_logo">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>10</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>About_Us_logo/UNITOV.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="USFD_logo">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>10</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>About_Us_logo/UOS.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="SWATNET_logo">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>10</y>
+        <width>250</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>About_Us_logo/SWATNet.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="EU_logo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>750</y>
+        <width>240</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>About_Us_logo/EN_FundedbytheEU_RGB_POS.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MSCA_logo">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>750</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>About_Us_logo/MSCA.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Acknowledgement">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>750</y>
+        <width>961</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>SWATNet has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie Grant Agreement No 955620</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Welcome_txt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>1301</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; font-style:italic;&quot;&gt;Welcome to CME Arrival Time Calculator !!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;This tool is part of &lt;/span&gt;&lt;a href=&quot;https://swatnet.eu/project9/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Project-9&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; under &lt;/span&gt;&lt;a href=&quot;https://swatnet.eu/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;SWATNet&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; framework. This Graphical User Interface (GUI) is designed to provide easy way to calculate Coronal Mass Ejection (CME) arrival time using Probabilistic Drag Based Model (P-DBM). The mathematical framework for the calculation in this GUI is part of PhD thesis of Ronish Mugatwala. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;One of the SWATNet's mission is to make cutting edge space weather prediction tools more user friendly for the students, researchers and enthusiasts.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Thank you for exploring this GUI. We hope it serves as a valuable resouce in your work and study!&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; text-decoration: underline;&quot;&gt;Note:&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; This tools is still under development and lack some of the features. List of known bugs is avilable on Github page of tool. If you have some suggestions or if you find any unlisted bug in a tool write to us via &lt;/span&gt;&lt;a href=&quot;https://github.com/astronish16&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; pull request or directly to &lt;/span&gt;&lt;a href=&quot;ronish.mugatwala@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Ronish Mugatwala&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="Wind_type_2"/>
+  <buttongroup name="Wind_type"/>
+  <buttongroup name="PDBM_group"/>
+  <buttongroup name="Auto_DBM"/>
+  <buttongroup name="PDBM_group_2"/>
+  <buttongroup name="Auto_DBM_2"/>
+ </buttongroups>
+</ui>
