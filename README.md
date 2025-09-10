@@ -4,6 +4,10 @@ Detailed description of the models can be found in [Vršnak et al., 2013 (DBM)](
 
 In the following, how DBM and P-DBM calaculations can be performed using this graphical user interface (GUI). In the probabilitic approach, a probability distribution function is buit around the defined input parameters of the CME and DBM.  
 
+
+---
+# Old Setup - Based on PyQT6
+This setup is no longer maintained.
 ## Setup
 This GUI has been created with pyQT6 framework which is comaptible with a python-3.9.
 The most recent LTS version of Ubuntu is equipped with a python-3.12; to avoid breaking an OS it recommanded to have working installation of Miniconda/Anaconda.
