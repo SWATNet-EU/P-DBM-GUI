@@ -3,7 +3,7 @@ name = "application-module"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.9.21"
+requires-python = ">=3.9.17"
 dependencies = [
     "astropy>=6.0.1",
     "astroquery>=0.4.10",
