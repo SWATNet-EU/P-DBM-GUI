@@ -304,9 +304,9 @@ def PDBM_RVT_plot(
     ax1.set_xlabel("time (UTC date hour)", fontsize=17)
     ax1.set_ylabel("R (solar radius)", color=color, fontsize=17)
     ax1.plot(Time, R_median, color=color, label="Distance")
-    ax1.fill_between(Time, R_q25, R_q75, alpha=0.40, linewidth=0, color=color)
-    ax1.fill_between(Time, R_p10, R_p90, alpha=0.25, linewidth=0, color=color)
-    ax1.fill_between(Time, R_max, R_min, alpha=0.15, linewidth=0, color=color)
+    ax1.fill_between(Time, R_q25, R_q75, alpha=0.30, linewidth=0, color=color)
+    ax1.fill_between(Time, R_p10, R_p90, alpha=0.2, linewidth=0, color=color)
+    ax1.fill_between(Time, R_max, R_min, alpha=0.1, linewidth=0, color=color)
     ax1.axvline(tdate, linestyle="--", color="black", label="Arrival Time")
     ax1.axhline(r_target, label=f"R_target = {r_target:.2f}")
     ax1.tick_params(axis="y", labelcolor=color)
@@ -317,9 +317,9 @@ def PDBM_RVT_plot(
     # we already handled the x-label with ax1
     ax2.set_ylabel("V (km/s)", color=color, fontsize=17)
     ax2.plot(Time, V_median, color=color, label="Speed")
-    ax2.fill_between(Time, V_q25, V_q75, alpha=0.4, linewidth=0, color=color)
-    ax2.fill_between(Time, V_p10, V_p90, alpha=0.25, linewidth=0, color=color)
-    ax2.fill_between(Time, V_max, V_min, alpha=0.15, linewidth=0, color=color)
+    ax2.fill_between(Time, V_q25, V_q75, alpha=0.3, linewidth=0, color=color)
+    ax2.fill_between(Time, V_p10, V_p90, alpha=0.2, linewidth=0, color=color)
+    ax2.fill_between(Time, V_max, V_min, alpha=0.1, linewidth=0, color=color)
     ax2.tick_params(axis="y", labelcolor=color)
 
     fig.tight_layout()  # otherwise the right y-label is slightly clipped
